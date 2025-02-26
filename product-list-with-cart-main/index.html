@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="background home">
+  <div class="">
+      <div>
+        <h1 class="head">Desserts</h1>
+        <div class="cards">
+          <div>
+            <div class="card1" id="card1">
+              <button class="button1" id="button1">
+                <img class="cart-icon"  src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick1">
+                <img class="decrement-icon" id="decrementIcon1" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart1">1</span>
+                <img class="increment-icon" id="incrementIcon1" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <div>
+              <p class="p1">Waffle</p> 
+              <p class="p2" id="item1">Waffle with Berries</p>
+              <p class="rate" id="rate1">$6.50</p>
+            </div>
+          </div>
+          <div>
+            <div class="card2" id="card2">
+              <button class="button1" id="button2">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick2">
+                <img class="decrement-icon" id="decrementIcon2" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart2">1</span>
+                <img class="increment-icon" id="incrementIcon2" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Crème Brûlée</p> 
+            <p class="p2" id="item2">Vanilla Bean Crème Brûlée</p>
+            <p class="rate" id="rate2">$7.00</p>
+            
+          </div>
+          <div>
+            <div class="card3" id="card3">
+              <button class="button1" id="button3">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick3">
+                <img class="decrement-icon" id="decrementIcon3" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart3">1</span>
+                <img class="increment-icon" id="incrementIcon3" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Macaron</p> 
+            <p class="p2" id="item3">Macaron Mix of Five</p>
+            <p class="rate" id="rate3">$8.00</p>
+            
+          </div>
+          <div>
+            <div class="card4" id="card4">
+              <button class="button1" id="button4">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick4">
+                <img class="decrement-icon" id="decrementIcon4" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart4">1</span>
+                <img class="increment-icon" id="incrementIcon4" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Tiramisu</p> 
+            <p class="p2" id="item4">Classic Tiramisu</p>
+            <p class="rate" id="rate4">$5.50</p>
+            
+          </div>
+          <div>
+            <div class="card5" id="card5">
+              <button class="button1" id="button5">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick5">
+                <img class="decrement-icon" id="decrementIcon5" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart5">1</span>
+                <img class="increment-icon" id="incrementIcon5" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Baklava</p> 
+            <p class="p2" id="item5">Pistachio Baklava</p>
+            <p class="rate" id="rate5">$4.00</p>
+            
+          </div>
+          <div>
+            <div class="card6" id="card6">
+              <button class="button1" id="button6"><img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick6">
+                <img class="decrement-icon" id="decrementIcon6" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart6">1</span>
+                <img class="increment-icon" id="incrementIcon6" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Pie</p> 
+            <p class="p2" id="item6">Lemon Meringue Pie</p>
+            <p class="rate" id="rate6">$5.00</p>
+            
+          </div>
+          <div>
+            <div class="card7" id="card7">
+              <button class="button1" id="button7">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick7">
+                <img class="decrement-icon" id="decrementIcon7" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart7">1</span>
+                <img class="increment-icon" id="incrementIcon7" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Cake</p> 
+            <p class="p2" id="item7">Red Velvet Cake</p>
+            <p class="rate" id="rate7">$4.50</p>
+            
+          </div>
+          <div>
+            <div class="card8" id="card8">
+              <button class="button1" id="button8">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick8">
+                <img class="decrement-icon" id="decrementIcon8" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart8">1</span>
+                <img class="increment-icon" id="incrementIcon8" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Brownie</p> 
+            <p class="p2" id="item8">Salted Caramel Brownie</p>
+            <p class="rate" id="rate8">$4.50</p>
+          </div>
+          <div>
+            <div class="card9" id="card9">
+              <button class="button1" id="button9">
+                <img class="cart-icon" src="./assets/images/icon-add-to-cart.svg"/>
+                <span class="" id="spanForAddCart">Add to Cart</span>
+              </button>
+              <div class="button1 button-styles-after-click1 d-none" id="buttonAfterClick9">
+                <img class="decrement-icon" id="decrementIcon9" src="./assets/images/icon-decrement-quantity.svg"/>
+                <span class="quantity1" id="spanForAddCart9">1</span>
+                <img class="increment-icon" id="incrementIcon9" src="./assets/images/icon-increment-quantity.svg"/>
+              </div>
+            </div>
+            <p class="p1">Panna Cotta</p> 
+            <p class="p2" id="item9">Vanilla Panna Cotta</p>
+            <p class="rate" id="rate9">$6.50</p>
+        </div>    
+      </div>
+    </div>
+  </div>
+  <div class="cart">
+    <h1 class="cart-head">Your Cart(<span id="yourCart">0</span>)</h1>
+    <div class="container-items" id="containerOfItems">
+      <ul class="cart-items" id="cartItems"></ul>
+    </div>
+    <img class="" id="cartImg" src="./assets/images/illustration-empty-cart.svg" />
+    <p class="cart-para" id="cartPara">Your added items will appear here</p>
+    <button class="button-in-cart d-none" id="buttonInCart">Confirm Order</button>
+  </div>
+</div>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  Coded by <a href="#">`${spanForAddCart1.textContent}X @${rate1.textContent} $${parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent)}`</a>.
+</div>
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+
+
+body{
+    margin: 0px;
+}
+
+.head{
+    font-weight: bold;
+    font-family: "Roboto";
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+
+
+.card1{
+    background-image: url("./assets/images/image-waffle-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+
+.card2{
+    background-image: url("./assets/images/image-creme-brulee-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card3{
+    background-image: url("./assets/images/image-macaron-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card4{
+    background-image: url("./assets/images/image-tiramisu-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card5{
+    background-image: url("./assets/images/image-baklava-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card6{
+    background-image: url("./assets/images/image-meringue-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card7{
+    background-image: url("./assets/images/image-cake-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card8{
+    background-image: url("./assets/images/image-brownie-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.card9{
+    background-image: url("./assets/images/image-panna-cotta-desktop.jpg");
+    background-size: cover;
+    min-width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.cart-icon{
+    width: 15px;
+    height: 15px;
+    margin-bottom: 10px;
+    color: red;
+    margin: 5px;
+}
+
+.decrement-icon{
+    color: green;
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.increment-icon{
+    color: green;
+    width: 10px;
+    height: 10px;
+    margin-top: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.button1{
+    font-family: "Roboto";
+    border-radius: 20px;
+    border:  white;
+    width: 105px;
+    height: 25px;
+    margin-top: 135px;
+    font-size: 11px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 5px;
+    border-color: white;
+}
+
+.p1{
+    color: gray;
+    font-family: "Roboto";
+    display: flex;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+.p2{
+    font-weight: bold;
+    font-family: "Roboto";
+    display: flex;
+    align-self: flex-start;
+    font-size: 12px;
+}
+.rate{
+    color: red;
+    font-family: "Roboto";
+    font-weight: bold;
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+.home{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.background{
+    background-color: rgba(255, 182, 193, 0.197);
+    padding-top: 30px;
+    padding: 50px;
+}
+
+.cart{
+    background-color: white;
+    margin-left: 10px;
+    align-self: flex-start;
+    margin-top: 10px;
+    padding-left: 10px;
+    border-radius: 7px;
+    flex-grow: 1;
+}
+
+.cart-head{
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.8);
+    margin-top: 10px;
+    width: 230px;
+}
+
+.cart-para{
+    font-family: "Roboto";
+    font-size: 15px;
+    
+}
+
+.cart-items{
+    font-family: "Roboto";
+    font-size: 15px;
+    min-width: 170px;
+    font-weight: bold;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.container-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-in-cart{
+    background-color: rgba(165, 42, 42, 0.897);
+    font-family: "Roboto";
+    color: white;
+    font-weight: bold;
+    width: 220px;
+    height: 40px;
+    border-radius: 20px;
+    border-width: thin;
+    border-color: brown;
+}
+
+.remove-img1{
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.remove-img2{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.remove-img3{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.remove-img4{
+    margin-left: 86px;
+    cursor: pointer;
+}
+
+.remove-img5{
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.remove-img6{
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.remove-img7{
+    margin-left:90px;
+    cursor: pointer;
+}
+
+.remove-img8{
+    margin-left: 38px;
+    cursor: pointer;
+}
+
+.remove-img9{
+    margin-left: 66px;
+    cursor: pointer;
+}
+
+.cards-styles-after-click{
+    border-style: solid;
+    border-color: red;
+}
+
+.button-styles-after-click1{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.quantity1{
+    margin-top: 4px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 15px;
+}
