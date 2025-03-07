@@ -217,8 +217,15 @@ body{
     font-weight: bold;
     list-style-type: none;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-right: 10px;
+    
+}
+
+.mini-cart{
+    display: flex;
+    flex-direction: row;
     margin-bottom: 10px;
 }
 
@@ -226,6 +233,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.total-order{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
 }
 
 .button-in-cart{
