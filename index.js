@@ -89,6 +89,7 @@ button6.classList.remove("d-none");
 button7.classList.remove("d-none");
 button8.classList.remove("d-none");
 button9.classList.remove("d-none");
+let typeDelivery = document.getElementById("typeDelivery");
 
 let buttonInCart = document.getElementById("buttonInCart");
 let cartSpan1;
@@ -118,6 +119,10 @@ let AfterIfStatement8;
 let cartSpan9;
 let cartSpan93;
 let AfterIfStatement9;
+
+let orderTotal = document.getElementById("orderTotal");
+let totalRate = document.getElementById("totalRate");
+totalRate.textContent = 0;
 
 button1.addEventListener("click", function(event){
     button1.classList.add("d-none");
@@ -174,6 +179,15 @@ button1.addEventListener("click", function(event){
     imgElement.classList.add("remove-img1");
     // imgElement.classList.setAttribute("id", "removeImg1");
     containerOfDeleteImg.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan13.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+
+    typeDelivery.classList.remove("d-none");
 });
 button2.addEventListener("click", function(event){
     button2.classList.add("d-none");
@@ -229,6 +243,19 @@ button2.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img2");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan23.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button3.addEventListener("click", function(event){
     button3.classList.add("d-none");
@@ -287,7 +314,18 @@ button3.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img3");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan33.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
     
+    typeDelivery.classList.remove("d-none");
 });
 button4.addEventListener("click", function(event){
     button4.classList.add("d-none");
@@ -346,6 +384,18 @@ button4.addEventListener("click", function(event){
     imgElement.classList.add("remove-img4");
     liElement.appendChild(imgElement);
     
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan43.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button5.addEventListener("click", function(event){
     button5.classList.add("d-none");
@@ -403,6 +453,19 @@ button5.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img5");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan53.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button6.addEventListener("click", function(event){
     button6.classList.add("d-none");
@@ -460,6 +523,19 @@ button6.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img6");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan63.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button7.addEventListener("click", function(event){
     button7.classList.add("d-none");
@@ -517,6 +593,19 @@ button7.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img7");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan73.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button8.addEventListener("click", function(event){
     button8.classList.add("d-none");
@@ -574,6 +663,19 @@ button8.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img8");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan83.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+
 });
 button9.addEventListener("click", function(event){
     button9.classList.add("d-none");
@@ -641,6 +743,19 @@ button9.addEventListener("click", function(event){
     imgElement.src ="./assets/images/icon-remove-item.svg";
     imgElement.classList.add("remove-img9");
     liElement.appendChild(imgElement);
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = cartSpan93.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
+    typeDelivery.classList.remove("d-none");
+    
 });
 
 incrementIcon1.addEventListener("click", function(event){
@@ -666,6 +781,17 @@ incrementIcon1.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan13) + parseFloat(AfterIfStatement1);
     cartSpan13.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate1.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon1.addEventListener("click", function(event){
     if (parseInt(spanForAddCart1.textContent) > 1){
@@ -692,6 +818,17 @@ decrementIcon1.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan13) - parseFloat(AfterIfStatement1);
     cartSpan13.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate1.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
     }
 });
 
@@ -719,6 +856,17 @@ incrementIcon2.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan23) + parseFloat(AfterIfStatement2);
     cartSpan23.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate2.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon2.addEventListener("click", function(event){
     if (parseInt(spanForAddCart2.textContent) > 1){
@@ -745,6 +893,16 @@ decrementIcon2.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan23) - parseFloat(AfterIfStatement2);
     cartSpan23.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate2.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });
@@ -773,6 +931,16 @@ incrementIcon3.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan33) + parseFloat(AfterIfStatement3);
     cartSpan33.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate3.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon3.addEventListener("click", function(event){
     if (parseInt(spanForAddCart3.textContent) > 1){
@@ -799,6 +967,16 @@ decrementIcon3.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan33) - parseFloat(AfterIfStatement3);
     cartSpan33.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate3.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });
@@ -827,6 +1005,17 @@ incrementIcon4.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan43) + parseFloat(AfterIfStatement4);
     cartSpan43.textContent = `$${calOfTotal}`;
 
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate4.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon4.addEventListener("click", function(event){
     if (parseInt(spanForAddCart4.textContent) > 1){
@@ -853,6 +1042,16 @@ decrementIcon4.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan43) - parseFloat(AfterIfStatement4);
     cartSpan43.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate4.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });
@@ -881,6 +1080,16 @@ incrementIcon5.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan53) + parseFloat(AfterIfStatement5);
     cartSpan53.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate5.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon5.addEventListener("click", function(event){
     if (parseInt(spanForAddCart5.textContent) > 1){
@@ -907,6 +1116,16 @@ decrementIcon5.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan53) - parseFloat(AfterIfStatement5);
     cartSpan53.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate5.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });
@@ -935,6 +1154,16 @@ incrementIcon6.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan63) + parseFloat(AfterIfStatement6);
     cartSpan63.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate6.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon6.addEventListener("click", function(event){
     if (parseInt(spanForAddCart6.textContent) > 1){
@@ -961,6 +1190,16 @@ decrementIcon6.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan63) - parseFloat(AfterIfStatement6);
     cartSpan63.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate6.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });
@@ -989,6 +1228,16 @@ incrementIcon7.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan73) + parseFloat(AfterIfStatement7);
     cartSpan73.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate7.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
 });
 decrementIcon7.addEventListener("click", function(event){
     if (parseInt(spanForAddCart7.textContent) > 1){
@@ -1016,6 +1265,16 @@ decrementIcon7.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan73) - parseFloat(AfterIfStatement7);
     cartSpan73.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate7.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
     }
 });
 incrementIcon8.addEventListener("click", function(event){
@@ -1042,6 +1301,16 @@ incrementIcon8.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan83) + parseFloat(AfterIfStatement8);
     cartSpan83.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate8.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
 });
 decrementIcon8.addEventListener("click", function(event){
@@ -1071,6 +1340,16 @@ decrementIcon8.addEventListener("click", function(event){
     let calOfTotal = parseFloat(parseOfCartSpan83) - parseFloat(AfterIfStatement8);
     cartSpan83.textContent = `$${calOfTotal}`;
 
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate8.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
+
     }
 });
 incrementIcon9.addEventListener("click", function(event){
@@ -1097,6 +1376,16 @@ incrementIcon9.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan93) + parseFloat(AfterIfStatement9);
     cartSpan93.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate9.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
 });
 decrementIcon9.addEventListener("click", function(event){
@@ -1125,6 +1414,16 @@ decrementIcon9.addEventListener("click", function(event){
 
     let calOfTotal = parseFloat(parseOfCartSpan93) - parseFloat(AfterIfStatement9);
     cartSpan93.textContent = `$${calOfTotal}`;
+
+    orderTotal.classList.remove("d-none");
+    let rate = totalRate.textContent;
+    let finalRate1 = rate.replace("$", "");
+    let rat = rate9.textContent;
+    let finalRat1 = rat.replace("$", ""); 
+    totalRate.textContent = `$${parseFloat(finalRate1) - parseFloat(finalRat1)}`;
+    console.log(finalRate1);
+    console.log(finalRat1);
+    console.log(totalRate.textContent);
 
     }
 });

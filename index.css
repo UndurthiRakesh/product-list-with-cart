@@ -235,10 +235,43 @@ body{
     justify-content: space-between;
 }
 
-.total-order{
+.total-order-container{
     display: flex;
     justify-content: space-between;
     margin-right: 10px;
+}
+
+.type-delivery{
+    display: flex;
+}
+
+.type-delivery-para{
+    margin-left: 20px;
+    font-size: 13px;
+    font-family: "Roboto";
+}
+
+
+.type-delivery-span{
+    font-family: "Sans Serif";
+    font-style: italic;
+    font-weight: bold;
+}
+
+.img-delivery-type{
+    margin-bottom: 10px;
+}
+
+.total-order{
+    font-family: "Sans Serif";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.total-rate{
+    font-family: "Sans Serif";
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .button-in-cart{

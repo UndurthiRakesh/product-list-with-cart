@@ -185,9 +185,13 @@
     </div>
     <img class="" id="cartImg" src="./assets/images/illustration-empty-cart.svg" />
     <p class="cart-para" id="cartPara">Your added items will appear here</p>
-    <div class="total-order d-none">
-      <p>Order Total</p>
-      <span>0</span>
+    <div class="total-order-container d-none" id="orderTotal">
+      <p class="total-order">Order Total</p>
+      <span class="total-rate" id="totalRate">0</span>
+    </div>
+    <div class="type-delivery d-none" id="typeDelivery">
+      <img class="img-delivery-type" src="./assets/images/icon-carbon-neutral.svg"/>
+      <p class="type-delivery-para">this is a <span class="type-delivery-span">carbon-neutral</span> delivery</p>
     </div>
     <button class="button-in-cart d-none" id="buttonInCart">Confirm Order</button>
   </div>
