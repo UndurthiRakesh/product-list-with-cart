@@ -119,10 +119,14 @@ let AfterIfStatement8;
 let cartSpan9;
 let cartSpan93;
 let AfterIfStatement9;
+let liElement1;
 
 let orderTotal = document.getElementById("orderTotal");
 let totalRate = document.getElementById("totalRate");
 totalRate.textContent = 0;
+
+
+localStorage.getItem("setBtn1");
 
 button1.addEventListener("click", function(event){
     button1.classList.add("d-none");
@@ -140,6 +144,7 @@ button1.addEventListener("click", function(event){
     liElement.classList.add("cart-items");
     containerOfItems.appendChild(liElement);
 
+    
     let anotherContainer = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
@@ -188,6 +193,9 @@ button1.addEventListener("click", function(event){
     totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
 
     typeDelivery.classList.remove("d-none");
+
+    localStorage.setItem("setBtn1", JSON.stringify(btn1));
+
 });
 button2.addEventListener("click", function(event){
     button2.classList.add("d-none");
@@ -1023,7 +1031,7 @@ decrementIcon4.addEventListener("click", function(event){
         spanForAddCart4.textContent = parseOfSpanForAddCart4 - 1;
 
         let parseOfYourCart = parseInt(yourCart.textContent);
-        yourCart.textContent = parseOfYourCart + 1;
+        yourCart.textContent = parseOfYourCart - 1;
 
         let replaceOfCartSpan4;
 
