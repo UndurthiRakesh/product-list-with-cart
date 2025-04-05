@@ -119,8 +119,34 @@ let AfterIfStatement8;
 let cartSpan9;
 let cartSpan93;
 let AfterIfStatement9;
+let imgElement1;
+let imgElement2;
+let imgElement3;
+let imgElement4;
+let imgElement5;
+let imgElement6;
+let imgElement7;
+let imgElement8;
+let imgElement9;
 let liElement1;
-
+let anotherContainer1;
+let liElement2;
+let anotherContainer2;
+let liElement3;
+let anotherContainer3;
+let liElement4;
+let anotherContainer4;
+let liElement5;
+let anotherContainer5;
+let liElement6;
+let anotherContainer6;
+let liElement7;
+let anotherContainer7;
+let liElement8;
+let anotherContainer8;
+let liElement9;
+let anotherContainer9;
+let containerOfDeleteImg1;
 let orderTotal = document.getElementById("orderTotal");
 let totalRate = document.getElementById("totalRate");
 totalRate.textContent = 0;
@@ -139,17 +165,17 @@ button1.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item1.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
-
+    liElement1 = document.createElement("li");
+    liElement1.textContent = item1.textContent;
+    liElement1.classList.add("cart-items");
+    containerOfItems.appendChild(liElement1);
     
-    let anotherContainer = document.createElement("div");
+    
+    anotherContainer1 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer1.appendChild(divContainerOfCartMini);
 
     cartSpan1 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -174,16 +200,16 @@ button1.addEventListener("click", function(event){
     cartSpan13.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan13);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer1);
 
-    let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    containerOfDeleteImg1 = document.createElement("div");
+    liElement1.appendChild(containerOfDeleteImg1);
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img1");
-    // imgElement.classList.setAttribute("id", "removeImg1");
-    containerOfDeleteImg.appendChild(imgElement);
+    imgElement1 = document.createElement("img");
+    imgElement1.src ="./assets/images/icon-remove-item.svg";
+    imgElement1.classList.add("remove-img1");
+    //imgElement1.classList.id= removeImg1;
+    containerOfDeleteImg1.appendChild(imgElement1);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -193,6 +219,24 @@ button1.addEventListener("click", function(event){
     totalRate.textContent = `$${parseFloat(finalRate1) + parseFloat(finalRat1)}`;
 
     typeDelivery.classList.remove("d-none");
+
+    imgElement1.addEventListener("click", function(event){
+        liElement1.classList.add("d-none");
+        anotherContainer1.classList.add("d-none");
+        let replaceSymbel = cartSpan13.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan1.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card1.classList.remove("cards-styles-after-click");
+        button1.classList.remove("d-none");
+        buttonAfterClick1.classList.add("d-none");
+    });
 
     localStorage.setItem("setBtn1", JSON.stringify(btn1));
 
@@ -208,16 +252,16 @@ button2.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item2.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement2 = document.createElement("li");
+    liElement2.textContent = item2.textContent;
+    liElement2.classList.add("cart-items");
+    containerOfItems.appendChild(liElement2);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer2 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer2.appendChild(divContainerOfCartMini);
 
     cartSpan2 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -242,15 +286,16 @@ button2.addEventListener("click", function(event){
     cartSpan23.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan23);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer2);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement2.appendChild(containerOfDeleteImg);
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img2");
-    liElement.appendChild(imgElement);
+    imgElement2 = document.createElement("img");
+    imgElement2.src ="./assets/images/icon-remove-item.svg";
+    imgElement2.classList.add("remove-img2");
+    //imgElement2.classList.setAttribute("id", "removeImg2");
+    liElement2.appendChild(imgElement2);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -264,6 +309,23 @@ button2.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement2.addEventListener("click", function(event){
+        liElement2.classList.add("d-none");
+        anotherContainer2.classList.add("d-none");
+        let replaceSymbel = cartSpan23.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan2.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card2.classList.remove("cards-styles-after-click");
+        button2.classList.remove("d-none");
+        buttonAfterClick2.classList.add("d-none");
+    });
 });
 button3.addEventListener("click", function(event){
     button3.classList.add("d-none");
@@ -276,16 +338,16 @@ button3.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item3.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement3 = document.createElement("li");
+    liElement3.textContent = item3.textContent;
+    liElement3.classList.add("cart-items");
+    containerOfItems.appendChild(liElement3);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer3 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer3.appendChild(divContainerOfCartMini);
 
     cartSpan3 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -312,16 +374,17 @@ button3.addEventListener("click", function(event){
     cartSpan33.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan33);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer3);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement3.appendChild(containerOfDeleteImg);
 
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img3");
-    liElement.appendChild(imgElement);
+    imgElement3 = document.createElement("img");
+    imgElement3.src ="./assets/images/icon-remove-item.svg";
+    imgElement3.classList.add("remove-img3");
+    //imgElement3.classList.setAttribute("id", "removeImg3");
+    liElement3.appendChild(imgElement3);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -334,6 +397,24 @@ button3.addEventListener("click", function(event){
     console.log(totalRate.textContent);
     
     typeDelivery.classList.remove("d-none");
+
+    imgElement3.addEventListener("click", function(event){
+        liElement3.classList.add("d-none");
+        anotherContainer3.classList.add("d-none");
+        let replaceSymbel = cartSpan33.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan3.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card3.classList.remove("cards-styles-after-click");
+        button3.classList.remove("d-none");
+        buttonAfterClick3.classList.add("d-none");
+    });
 });
 button4.addEventListener("click", function(event){
     button4.classList.add("d-none");
@@ -346,16 +427,16 @@ button4.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item4.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement4 = document.createElement("li");
+    liElement4.textContent = item4.textContent;
+    liElement4.classList.add("cart-items");
+    containerOfItems.appendChild(liElement4);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer4 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer4.appendChild(divContainerOfCartMini);
 
     cartSpan4 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -380,17 +461,18 @@ button4.addEventListener("click", function(event){
     cartSpan43.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan43);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer4);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement4.appendChild(containerOfDeleteImg);
 
     
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img4");
-    liElement.appendChild(imgElement);
+    imgElement4 = document.createElement("img");
+    imgElement4.src ="./assets/images/icon-remove-item.svg";
+    imgElement4.classList.add("remove-img4");
+    //imgElement4.classList.setAttribute("id", "removeImg4");
+    liElement4.appendChild(imgElement4);
     
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -404,6 +486,23 @@ button4.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement4.addEventListener("click", function(event){
+        liElement4.classList.add("d-none");
+        anotherContainer4.classList.add("d-none");
+        let replaceSymbel = cartSpan43.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan4.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card4.classList.remove("cards-styles-after-click");
+        button4.classList.remove("d-none");
+        buttonAfterClick4.classList.add("d-none");
+    });
 });
 button5.addEventListener("click", function(event){
     button5.classList.add("d-none");
@@ -416,16 +515,16 @@ button5.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item5.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement5 = document.createElement("li");
+    liElement5.textContent = item5.textContent;
+    liElement5.classList.add("cart-items");
+    containerOfItems.appendChild(liElement5);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer5 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer5.appendChild(divContainerOfCartMini);
 
     cartSpan5 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -450,17 +549,18 @@ button5.addEventListener("click", function(event){
     cartSpan53.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan53);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer5);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement5.appendChild(containerOfDeleteImg);
 
 
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img5");
-    liElement.appendChild(imgElement);
+    imgElement5 = document.createElement("img");
+    imgElement5.src ="./assets/images/icon-remove-item.svg";
+    imgElement5.classList.add("remove-img5");
+    //imgElement5.classList.setAttribute("id", "removeImg5");
+    liElement5.appendChild(imgElement5);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -474,6 +574,23 @@ button5.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement5.addEventListener("click", function(event){
+        liElement5.classList.add("d-none");
+        anotherContainer5.classList.add("d-none");
+        let replaceSymbel = cartSpan53.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan5.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card5.classList.remove("cards-styles-after-click");
+        button5.classList.remove("d-none");
+        buttonAfterClick5.classList.add("d-none");
+    });
 });
 button6.addEventListener("click", function(event){
     button6.classList.add("d-none");
@@ -486,16 +603,16 @@ button6.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item6.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement6 = document.createElement("li");
+    liElement6.textContent = item6.textContent;
+    liElement6.classList.add("cart-items");
+    containerOfItems.appendChild(liElement6);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer6 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer6.appendChild(divContainerOfCartMini);
 
     cartSpan6 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -520,17 +637,18 @@ button6.addEventListener("click", function(event){
     cartSpan63.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan63);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer6);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement6.appendChild(containerOfDeleteImg);
 
 
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img6");
-    liElement.appendChild(imgElement);
+    imgElement6 = document.createElement("img");
+    imgElement6.src ="./assets/images/icon-remove-item.svg";
+    imgElement6.classList.add("remove-img6");
+    //imgElement6.classList.setAttribute("id", "removeImg6");
+    liElement6.appendChild(imgElement6);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -544,6 +662,23 @@ button6.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement6.addEventListener("click", function(event){
+        liElement6.classList.add("d-none");
+        anotherContainer6.classList.add("d-none");
+        let replaceSymbel = cartSpan63.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan6.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card6.classList.remove("cards-styles-after-click");
+        button6.classList.remove("d-none");
+        buttonAfterClick6.classList.add("d-none");
+    });
 });
 button7.addEventListener("click", function(event){
     button7.classList.add("d-none");
@@ -556,16 +691,16 @@ button7.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item7.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement7 = document.createElement("li");
+    liElement7.textContent = item7.textContent;
+    liElement7.classList.add("cart-items");
+    containerOfItems.appendChild(liElement7);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer7 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer7.appendChild(divContainerOfCartMini);
 
     cartSpan7 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -590,17 +725,18 @@ button7.addEventListener("click", function(event){
     cartSpan73.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan73);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer7);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement7.appendChild(containerOfDeleteImg);
 
 
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img7");
-    liElement.appendChild(imgElement);
+    imgElement7 = document.createElement("img");
+    imgElement7.src ="./assets/images/icon-remove-item.svg";
+    imgElement7.classList.add("remove-img7");
+    //imgElement7.classList.setAttribute("id", "removeImg7");
+    liElement7.appendChild(imgElement7);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -614,6 +750,23 @@ button7.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement7.addEventListener("click", function(event){
+        liElement7.classList.add("d-none");
+        anotherContainer7.classList.add("d-none");
+        let replaceSymbel = cartSpan73.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan7.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card7.classList.remove("cards-styles-after-click");
+        button7.classList.remove("d-none");
+        buttonAfterClick7.classList.add("d-none");
+    });
 });
 button8.addEventListener("click", function(event){
     button8.classList.add("d-none");
@@ -626,16 +779,16 @@ button8.addEventListener("click", function(event){
 
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
-    let liElement = document.createElement("li");
-    liElement.textContent = item8.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement8 = document.createElement("li");
+    liElement8.textContent = item8.textContent;
+    liElement8.classList.add("cart-items");
+    containerOfItems.appendChild(liElement8);
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer8 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer8.appendChild(divContainerOfCartMini);
 
     cartSpan8 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -660,17 +813,18 @@ button8.addEventListener("click", function(event){
     cartSpan83.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan83);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer8);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement8.appendChild(containerOfDeleteImg);
 
 
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img8");
-    liElement.appendChild(imgElement);
+    imgElement8 = document.createElement("img");
+    imgElement8.src ="./assets/images/icon-remove-item.svg";
+    imgElement8.classList.add("remove-img8");
+    //imgElement8.classList.setAttribute("id", "removeImg8");
+    liElement8.appendChild(imgElement8);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -684,6 +838,23 @@ button8.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
 
+    imgElement8.addEventListener("click", function(event){
+        liElement8.classList.add("d-none");
+        anotherContainer8.classList.add("d-none");
+        let replaceSymbel = cartSpan83.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan8.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card8.classList.remove("cards-styles-after-click");
+        button8.classList.remove("d-none");
+        buttonAfterClick8.classList.add("d-none");
+    });
 });
 button9.addEventListener("click", function(event){
     button9.classList.add("d-none");
@@ -697,17 +868,17 @@ button9.addEventListener("click", function(event){
     cartImg.classList.add("d-none");
     cartPara.classList.add("d-none");
 
-    let liElement = document.createElement("li");
-    liElement.textContent = item9.textContent;
-    liElement.classList.add("cart-items");
-    containerOfItems.appendChild(liElement);
+    liElement9 = document.createElement("li");
+    liElement9.textContent = item9.textContent;
+    liElement9.classList.add("cart-items");
+    containerOfItems.appendChild(liElement9);
 
 
-    let anotherContainer = document.createElement("div");
+    anotherContainer9 = document.createElement("div");
 
     let divContainerOfCartMini = document.createElement("div");
     divContainerOfCartMini.classList.add("mini-cart");
-    anotherContainer.appendChild(divContainerOfCartMini);
+    anotherContainer9.appendChild(divContainerOfCartMini);
 
     cartSpan9 = document.createElement("span");
     // let button1Item = parseInt(rate1.textContent) * parseInt(spanForAddCart1.textContent);
@@ -732,10 +903,10 @@ button9.addEventListener("click", function(event){
     cartSpan93.style.marginRight = "10px";
     divContainerOfCartMini.appendChild(cartSpan93);
 
-    containerOfItems.appendChild(anotherContainer);
+    containerOfItems.appendChild(anotherContainer9);
 
     let containerOfDeleteImg = document.createElement("div");
-    liElement.appendChild(containerOfDeleteImg);
+    liElement9.appendChild(containerOfDeleteImg);
 
 
 
@@ -747,10 +918,11 @@ button9.addEventListener("click", function(event){
 
     // liElement.appendChild(anotherContainer);
 
-    let imgElement = document.createElement("img");
-    imgElement.src ="./assets/images/icon-remove-item.svg";
-    imgElement.classList.add("remove-img9");
-    liElement.appendChild(imgElement);
+    imgElement9 = document.createElement("img");
+    imgElement9.src ="./assets/images/icon-remove-item.svg";
+    imgElement9.classList.add("remove-img9");
+    //imgElement9.classList.setAttribute("id", "removeImg9");
+    liElement9.appendChild(imgElement9);
 
     orderTotal.classList.remove("d-none");
     let rate = totalRate.textContent;
@@ -764,6 +936,23 @@ button9.addEventListener("click", function(event){
 
     typeDelivery.classList.remove("d-none");
     
+    imgElement9.addEventListener("click", function(event){
+        liElement9.classList.add("d-none");
+        anotherContainer9.classList.add("d-none");
+        let replaceSymbel = cartSpan93.textContent.replace("$", "");
+        let amount = parseInt(replaceSymbel);
+        let replaceAnotherSymbel = totalRate.textContent.replace("$", "");
+        let orderAmount = parseInt(replaceAnotherSymbel);
+        let finalAmount = orderAmount - amount;
+        totalRate.textContent = `$${finalAmount}`;
+        let replaceThirdSymbel = cartSpan9.textContent.replace("x", "");
+        let countNoOfItems = parseInt(replaceThirdSymbel);
+        let yourCartNum = parseInt(yourCart.textContent)-countNoOfItems;
+        yourCart.textContent = yourCartNum;
+        card9.classList.remove("cards-styles-after-click");
+        button9.classList.remove("d-none");
+        buttonAfterClick9.classList.add("d-none");
+    });
 });
 
 incrementIcon1.addEventListener("click", function(event){
@@ -1435,4 +1624,6 @@ decrementIcon9.addEventListener("click", function(event){
 
     }
 });
+
+
 
